@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!--tools-->
+    <script src="js/tools/jq/jquery-1.4.4.min.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
+    <script src="js/tools/vue.js"></script>
+    <script src="js/tools/Iview/iview.js"></script>
+    <!--tools-->
+    <!--cs-->
+    <!--<script src="js/tools/Cs/CsAjax.js"></script>-->
+    <script src="js/tools/Cs/CsCommon.js"></script>
+    <script src="js/tools/Cs/CsHttp.js"></script>
+    <!--cs-->
+    <script src="js/snow.js"></script>
+
+    <script src="js/tools/velocity.min.js"></script>
+    <script src="js/tools/velocity.ui.min.js"></script>
+
+    <!--样式-->
+    <link href="css/tools/Iview/iview.css" rel="stylesheet" />
+    <!--样式-->
+    <script>
+        //CsJqueryEx.Host = "http://118.31.66.137:8081";
+
+    </script>
+
+    <script type="text/javascript" src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+
+    <script>
+
+    </script>
+
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="app" style="display:none;">
+        <div class="topRight">
+            <ul>
+                <li>
+                    <div>
+                        <img class="roundimg" src="img/round01.png" />
+                        <div class="rightText" onclick="go2();">
+                            地图
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <div>
+                        <img class="roundimg" src="img/round01.png" />
+                        <div class="rightText" onclick="love();">
+                            点赞
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <div>
+                        <img class="roundimg" src="img/round01.png" />
+                        <div class="rightText" onclick="contact2();">
+                            联系
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <div class="bottomRight">
+            <ul>
+                <!--<li>
+                    <div>
+                        <img class="giftimg" src="img/gift.png" />
+                    </div>
+                </li>-->
+                <li style="margin-top: 50px;">
+                    <div>
+                        <img class="musicimg" src="img/musicIcon2.png" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="page active" id="page1" style="position:fixed;">
+            <div class="content">
+                <img class="bgImg" id="image1" src="img/me/1.jpg" />
+                <ul class="page1-line1">
+                    <li>
+                        <row>
+                            <img style="width: 90%;" src="img/67a35a27-b0be-4e48-b963-c61b98753a8a.png" />
+                        </row>
+                    </li>
+                    <li>
+                        <row>
+                            <i-col span="9">
+                                <div id="name1">
+                                    Mr.陈帅
+                                </div>
+                            </i-col>
+                            <i-col span="6">
+                                <img style="width: 80px; margin-left: 15px;" src="img/9ddb2951-664e-4e17-8d29-d98b0ff39319.png" />
+                            </i-col>
+                            <i-col span="9">
+                                <div id="name2">
+                                    Mrs.林露
+                                </div>
+                            </i-col>
+                        </row>
+                    </li>
+                    <li>
+                        <row>
+                            <div id="time">
+                                2018年12月31日
+                            </div>
+                        </row>
+                    </li>
+                    <li>
+                        <row>
+                            <div id="address">
+                                诚邀您参加我们的婚礼
+                            </div>
+                        </row>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page " id="page2" style="position:fixed;">
+            <div class="content">
+                <div id="pic1" class="csText hide">
+                    这是一封
+                </div>
+                <div id="pic2" class="csText hide">
+                    魔性的
+                </div>
+                <div id="pic3" class="csText hide">
+                    婚礼请柬
+                </div>
+                <div id="pic4" class="csText hide">
+                    让我们
+                </div>
+                <div id="pic5" class="csText hide">
+                    一起
+                </div>
+                <div id="pic6" class="csText hide">
+                    见证
+                </div>
+                <div id="pic7" class="csText hide" style="font-size: 100px;">
+                    Are You Ready
+                </div>
+                <div id="pic8" class="csText hide">
+                    <img src="img/nums/3.png" />
+                </div>
+                <div id="pic9" class="csText hide">
+                    <img src="img/nums/2.png" />
+                </div>
+                <div id="pic10" class="csText hide">
+                    <img src="img/nums/1.png" />
+                </div>
+                <div id="pic11" class="csText hide">
+                    GO!
+                </div>
+                <div id="pic13" class="csText hide">
+                    先来
+                </div>2
+                <div id="pic14" class="csText hide">
+                    认识
+                </div>
+                <div id="pic15" class="csText hide">
+                    帅帅哒
+                </div>
+                <div id="pic151" class="csText hide">
+                    的
+                </div>
+                <div id="pic152" class="csText hide">
+                    新郎
+                </div>
+                <div id="pic16" class="csText hide">
+                    <img class="img1" src="img/me/nan/2.JPG" />
+                </div>
+                <div id="pic17" class="csText hide">
+                    <img class="img1" src="img/me/nan/1.JPG" />
+                </div>
+                <div id="pic18" class="csText hide">
+                    <img class="img1" src="img/me/nan/4.JPG" />
+                </div>
+                <div id="pic22" class="csText hide">
+                    他爱老婆
+                </div>
+                <div id="pic23" class="csText hide">
+                    爱学习
+                </div>
+                <div id="pic24" class="csText hide">
+                    爱工作
+                </div>
+                <div id="pic25" class="csText hide">
+                    <img class="img1" src="img/me/he/1.JPG" />
+                </div>
+                <div id="pic26" class="csText hide">
+                    <img class="img1" src="img/me/he/2.JPG" />
+                </div>
+                <div id="pic261" class="csText hide">
+                    <img class="img1" src="img/me/he/3.JPG" />
+                </div>
+
+                <div id="pic27" class="csText hide">
+                    接下来
+                </div>
+
+                <div id="pic28" class="csText hide">
+                    是我们
+                </div>
+
+                <div id="pic29" class="csText hide">
+                    美美哒
+                </div>
+
+                <div id="pic31" class="csText hide">
+                    新娘
+                </div>
+
+                <div id="pic32" class="csText hide">
+                    <img class="img1" src="img/me/nv/1.JPG" />
+                </div>
+
+                <div id="pic33" class="csText hide">
+                    <img class="img1" src="img/me/nv/2.JPG" />
+                </div>
+
+                <div id="pic34" class="csText hide">
+                    <img class="img1" src="img/me/nv/3.JPG" />
+                </div>
+                <div id="pic35" class="csText hide">
+                    她
+                </div>
+                <div id="pic36" class="csText hide">
+                    <img class="img1" src="img/me/nv/4.JPG" />
+                </div>
+                <div id="pic361" class="csText hide">
+                    美丽大方
+                </div>
+                <div id="pic37" class="csText hide">
+                    温柔可爱
+                </div>
+                <div id="pic38" class="csText hide">
+                    一定成为
+                </div>
+                <div id="pic39" class="csText hide">
+                    一名合格
+                </div>
+                <div id="pic40" class="csText hide">
+                    的
+                </div>
+                <div id="pic41" class="csText hide">
+                    妻子
+                </div>
+                <div id="pic42" class="csText hide">
+                    陈先生
+                </div>
+                <div id="pic421" class="csText hide">
+                    <img class="img1" src="img/me/nan/3.JPG" />
+                </div>
+                <div id="pic43" class="csText hide">
+                    请看好
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="page3" style="position:fixed;">
+            <div class="content">
+                <ul style="text-align: left; margin-top: 20%;margin-left: 10%;">
+                    <li>
+                        <div id="page3pic1" class="csText2 hide">
+                            家务活全包
+                        </div>
+                    </li>
+                    <li>
+                        <div id="page3pic2" class="csText2 hide">
+                            收入上交
+                        </div>
+                    </li>
+                    <li>
+                        <div id="page3pic3" class="csText2 hide">
+                            老婆的菜全吃
+                        </div>
+                    </li>
+                    <li>
+                        <div id="page3pic4" class="csText2 hide">
+                            老婆的话全听
+                        </div>
+                    </li>
+                    <li>
+                        <div id="page3pic5" class="csText2 hide">
+                            购物全陪
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="page" id="page4" style="position:fixed;">
+            <img class="bgImg" src="img/1.jpg" />
+            <div class="content">
+                <div id="page4pic1" class="csText hide">
+                    <img class="img1" src="img/me/he/4_1.png" />
+                </div>
+                <div id="page4pic2" class="csText hide">
+                    <img class="img1" src="img/me/he/5_1.png" />
+                </div>
+                <div id="page4pic3" class="csText hide">
+                    <img class="img1" src="img/me/he/4.JPG" />
+                </div>
+                <div id="page4pic4" class="csText hide">
+                    <img class="img1" src="img/me/he/5.JPG" />
+                </div>
+                <div id="page4pic5" class="csText hide">
+                    <img class="img1" src="img/me/he/6.JPG" />
+                </div>
+                <div id="page4pic6" class="csText hide">
+                    <img class="img1" src="img/me/he/7.JPG" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page" id="page5" style="position:fixed;">
+            <div class="content">
+                <div id="page5pic1" class="csText hide">
+                    反正
+                </div>
+                <div id="page5pic2" class="csText hide">
+                    往后余生
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="page6" style="position:fixed;">
+            <div class="content">
+                <ul style="text-align: left; margin-top: 20%;margin-left: 10%;">
+                    <li>
+                        <div id="page6pic1" class="csText3 hide">
+                            洗碗是你
+                        </div>
+                    </li>
+                    <li>
+                        <div id="page6pic2" class="csText3 hide">
+                            拖地是你
+                        </div>
+                    </li>
+                    <li>
+                        <div id="page6pic3" class="csText3 hide">
+                            挣钱是你
+                        </div>
+                    </li>
+                    <li>
+                        <div id="page6pic4" class="csText3 hide">
+                            洗衣做饭还是你
+                        </div>
+                    </li>
+                    <li>
+                        <div id="page6pic5" class="csText3 hide">
+                            带孩子是你
+                        </div>
+                    </li>
+                    <li>
+                        <div id="page6pic6" class="csText3 hide" style="  font-size: 90.08px;">
+                            生孩子扛大米都是你
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="page" id="page7" style="position:fixed;">
+            <div class="content">
+                <div id="page7pic1" class="csText hide">
+                    最后
+                </div>
+                <div id="page7pic2" class="csText hide">
+                    请祝福我们
+                </div>
+                <div id="page7pic3" class="csText hide">
+                    永结同心
+                </div>
+                <div id="page7pic4" class="csText hide">
+                    <img class="img1" src="img/me/he/8.JPG" />
+                </div>
+                <div id="page7pic5" class="csText hide">
+                    百年好合
+                </div>
+                <div id="page7pic6" class="csText hide">
+                    <img class="img1" src="img/me/he/10_1.png" />
+                </div>
+                <div id="page7pic7" class="csText hide">
+                    <img class="img1" src="img/me/he/9.JPG" />
+                </div>
+                <div id="page7pic8" class="csText hide">
+                    白头偕老
+                </div>
+                <div id="page7pic9" class="csText hide">
+                    <img class="img1" src="img/me/he/10.JPG" />
+                </div>
+                <div id="page7pic10" class="csText hide">
+                    <img class="img1" src="img/me/he/11.JPG" />
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="page8" style="position:fixed;">
+            <div class="content">
+                <div id="page8pic1" class="csText hide">
+                    大家
+                </div>
+                <div id="page8pic2" class="csText hide">
+                    请记得
+                </div>
+                <div id="page8pic3" class="csText hide">
+                    2018/12/31
+                </div>
+                <div id="page8pic4" class="csText hide" style="  font-size: 110.08px;">
+                    <row>
+                        农历 十一月廿⑤
+                    </row>
+                    <row>
+                        星期一
+                    </row>
+                </div>
+                <div id="page8pic5" class="csText hide" style="  font-size: 110.08px;">
+                    <row>
+                        福州市连江县
+                    </row>
+                    <row>
+                        璟江大酒店
+                    </row>
+                </div>
+                <div id="page8pic6" class="csText hide" style="  font-size: 130.08px;">
+                    参加我们的婚礼
+                </div>
+                <div id="page8pic7" class="csText hide" style="  font-size: 130.08px;">
+                    参加我们的婚礼
+                </div>
+                <div id="page8pic8" class="csText hide" style="  font-size: 130.08px;">
+                    参加我们的婚礼
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="page" id="page9" style="position:fixed;">
+            <div class="content">
+                <img class="bgImg2" id="page9image1" src="img/me/3.png" />
+                <ul class="page1-line1">
+                    <li>
+                        <row>
+                            <img id="page9pic1" src="http://api.map.baidu.com/staticimage?width=410&height=200&center=119.494258,26.355753&zoom=17" onclick="go2();"/>
+                        </row>
+                    </li>
+                    <li>
+                        <row>
+                            <div id="page9pic2" style="margin-top: -13%;margin-left: -125px;">
+                                新郎:18038339106
+                            </div>
+                        </row>
+                    </li>
+                    <li>
+                        <row>
+                            <div id="page9pic3" style="margin-left: -125px;">
+                                新娘:15980294606
+                            </div>
+                        </row>
+                    </li>
+                    <li>
+                        <row>
+                            <div id="page9pic4" style="margin-left: -13%;">
+                                连江县丹阳镇聚荣大饭店
+                            </div>
+                        </row>
+                    </li>
+                    <li>
+                        <row>
+                            <div id="page9pic5" style="margin-left: -18%;">
+                                2018/12/31 11:00
+                            </div>
+                        </row>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <audio id="globalAudioPlayer" src="mp3/1.mp3" loop="" autoplay="true"></audio>
+    </div>
+    <script src="js/index2.js"></script>
+</body>
+</html>
